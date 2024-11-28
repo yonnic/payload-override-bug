@@ -12,6 +12,13 @@ export const PostsCollection: CollectionConfig = {
       name: 'title',
       type: 'text',
     },
+    {
+      name: 'publishDate',
+      label: 'Publish Date',
+      type: 'date',
+      required: true,
+      defaultValue: () => new Date().toISOString(),
+    },
   ],
   versions: {
     drafts: true,
